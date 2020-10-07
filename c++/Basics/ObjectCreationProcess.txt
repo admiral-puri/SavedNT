@@ -1,0 +1,42 @@
+Object Creation Process
+
+Object creation is a two step process.
+1) Memory Allocation.
+2) Execution of the Constructor.
+
+
+Memory Allocation
+-----------------------
+In memory, an object is a composite block defined
+by a collection of non static data members of
+the class.
+
+Constructor
+--------------
+Constructor is an object initializer.
+It is a special member that resembles a function.
+It Signature has :
+ a) Same name as of the class.
+ b) No return type specification.
+It is automatically invoked to execute as object of the class is created.
+It is used to initialize the object.
+ 
+Compiler support:
+-----------------------
+If for a class theres no constructor defined then 
+the compiler would auto generate a public and default (parameterless) 
+constructor with empty definition (body).
+It allows object creation, but doesnt initialize the object members.
+
+If a data member is initialized while declaration then 
+the initialization staement is transferred into the constructors of the class.
+
+
+Constructor Overloading
+---------------------------
+Constructor Overloading is defining multiple constructors for the class with unique set of parameters.
+  
+This allows object initialization in multiple ways.
+
+Known that if an operation is possible in multiple ways then it is polymorphic.
+So overloading constructors is implementing compile time polymorphism.

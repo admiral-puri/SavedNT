@@ -1,0 +1,195 @@
+An application is designed and developed to perform a task.
+
+A task is a collection of multiple sub tasks.
+
+The application may execute the sub-tasks sequentially or concurrently.
+
+Accordingly it will be referred as a single-threaded or a multi-threaded 
+application.
+
+Implementation
+---------------
+By default every application is single-threaded.
+The one thread it has is the "main" thread.
+
+A single threaded application uses the one 
+available thread to invoke all the sub tasks.
+Hence the sub tasks are performed sequentially.
+
+A multi threaded application creates custom 
+threads and makes them execute sub tasks.
+By this approach concurrency is achieved. 
+
+Java supports developement of multi threaded 
+applications in 2 ways :
+
+1) By extending Thread class.
+2) By using Thread object and implementing Runnable interface.
+
+Extending Thread class
+------------------------
+1) Define a class that extends the Thread class.
+2) Every object of the sub class is a custom thread.
+3) Every custom thread is inactive by default. It must be activated once by calling start() on the object.
+4) On activation the custom thread begins concurrent execution of run().
+5) Being a sub class it has inherited a run() method from the super class Thread. The inherited run() has empty definition. Override it to assign sub tasks to be executed concurrently.
+6) run() defines the life cycle of thread. Once run() is complete thread goes into dead state and cannot be reactivated.
+
+Life of a Java Program
+---------------------------
+By default a Java application is single threaded 
+and the one thread it has is the main thread.
+
+The life of main thread is defined by the main method.
+
+
+If a Java program defines custom threads then the 
+life of the application is until the life of the 
+last running non daemon thread. 
+
+Non Daemon Threads
+---------------------
+By default all the threads are non daemon threads, in Java.
+A non daemon thread keeps the JVM alive (application running) 
+until its alloted activity is pending.
+
+So when the activities of all the non daemon threads get over, 
+the process completes.
+
+
+Daemon Threads
+-----------------
+A daemon thread cannot keeps the JVM alive (application running) 
+until its alloted activity is pending.
+
+If its activity is complete before the activities of other non 
+daemon threads then it ends normally.
+
+But if the activities of all the non daemon threads get over, 
+the process completes and the daemon threads get pre mature 
+termination.
+
+
+In Java, a thread can be set as daemon thread using the method : 
+ setDaemon(boolean)
+before activation.
+
+
+FYI:
+Unhandled Exceptions cause death of the thread.
+It may affect the life of the Java application.
+
+Thread Sleep
+-----------------
+Sleep is used to introduce a delay in execution of 
+the thread.
+
+By sleep the threads gets suspended for specified time.
+
+The accuracy of sleep depends on systems timers and schedulers.
+
+In Java, thread sleep is applied through the static method 
+sleep(milliseconds) of the class Thread.
+
+It is possible to bring a thread out of sleep prematurely, by
+the use of interrupt.
+Hence Thread.sleep() method raises InterruptedException
+that must be handled.
+
+
+Shared Resource and Critical Sections of Code
+--------------------------------------------------
+A shared resource is a device or an object
+that is accessed by multiple threads or processes.
+
+The shared resource may or may not support
+concurrent usage.
+
+If it supports concurrency then theres no issue.
+
+But if there is a shared resource that doesnt 
+support concurrency and is accessed by multiple 
+threads/processes at a time, then all the code 
+that accesses it must be declared as "critical 
+sections".
+
+
+So said, a critical section is a code (may be a 
+method) that accesses a shared resource which 
+doesnt support concurrency.
+
+What happens due to critical sections?
+A critical section internally uses thread
+locking mechanism (like a mutex or a semaphore)
+that allows only one (or a limited number of) 
+thread(s) to access the shared resource.
+
+Once a thread enters a critical section the 
+mutex or semaphore activates and locks all the 
+critical sections.
+
+By this other threads that wish to enter any of 
+the critical section face a lock applied and 
+hence get suspensed.
+
+As the thread that owns the critical section
+completes the usage of the shared resource and 
+exits the critical section, the mutex or the 
+semaphore gets unlocked and other suspened threads 
+activate in FCFS or priority order and sequentially 
+get a chance to execute the respective critical 
+section of code, hence getting respective usage 
+of the shared resrouce.
+
+synchronized
+---------------
+Java provides "synchronized" statement to define 
+"Critical Sections" of code.
+
+HOW IT WORKS?
+--------------------
+In Java, Object class is the default super class 
+for all the classes.
+
+Object class defines a monitor (binary semaphore). 
+So by inheritance the monitor is available in all 
+the classes.
+
+But the object monitor is "inactive" by default.
+
+It gets activated for the object if a synchronized 
+method or block of code is executed.
+
+Once active the monitor (binary semaphore) allows 
+only one thread to execute the method or block of 
+code at one  time.
+
+By this sequential access of the shared resource 
+is achieved.
+
+
+Thread Join
+----------------
+A thread join suspends the current thread 
+(one that calls joins) until a target thread 
+completes.
+
+Example :
+There are two threads ThreadA and ThreadB.
+At line number n, ThreadA executes a call like :
+   ThreadB.join()
+This would suspend ThreadA until ThreadB completes.
+
+If ThreadB was already complete then join would 
+not cause any suspension.
+
+A thread that is suspended by join can be 
+brought out of join and resumed by :
+1) InterruptedException
+Such an interrupt must be raised by some other thread.
+2) Timed join
+i.e. a call like : ThreadB.join(1000); //milli seconds
+
+FYI
+------
+Improper use of join may cause application deadlock.

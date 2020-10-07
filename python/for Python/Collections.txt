@@ -1,0 +1,174 @@
+Python Collections (Arrays)
+There are four collection data types in the Python programming language:
+
+* List
+* Tuple
+* Set
+* Dictionary
+
+
+When choosing a collection type, it is important to understand the 
+properties of that type.  Choosing the right type for a particular 
+data set could increase efficiency and security.
+
+List
+A list is a collection which is orderable and changeable. 
+In Python lists are written with square brackets.
+
+#declare
+ primelist = [3,7,11,13,17,19]
+
+#output
+ print(primelist)
+
+#output
+ for pno in primelist:
+  print pno
+
+#output
+ i =0
+ while i < len(primelist):
+  print primelist[i]
+
+# Add Item to the end of the list, use the append() method:
+ primelist.append(23)
+
+# To add an item at the specified index, use the insert() method:
+ primelist.insert(1, 5)
+
+# To update an item at the specified index, use operator [] with index:
+ primelist[3] =100
+
+
+# To remove a specified item, use the remove() method:
+ primelist.remove(100)
+ 
+# To remove element at the specified index, use the pop() method (or the last item if index is not specified):
+ primelist.pop(3) #removes element at index 3
+ primelist.pop() #remove the last element
+
+# To clear the entire list, use the clear() method
+ primelist.clear()
+
+# To reverse the list, use the reverse() method
+ primelist.reverse()
+
+# To sort the list, use the sort() method
+ primelist.sort()
+
+# To copy the list, use the copy() method
+ mylist  = primelist.copy()
+
+
+Tuple
+=========
+A tuple is a collection which is orderable but unchangeable. 
+In Python tuples are written with round brackets.
+FYI: Once a tuple is created, you cannot add items to it as Tuples are unchangeable.
+
+# Example
+ fruits = ("apple", "banana", "cherry")
+ print(fruits)
+
+# Access indexwise
+ print(fruits[1])
+
+# iterate
+ for i in fruits:
+  print(i)
+
+#size
+ print(len(fruits))
+
+
+
+Set
+=====
+A set is a unordered, unindexed collection of unique values. 
+In Python sets are written with curly brackets.
+
+languages = {"c", "c++", "python", "java"}
+print(languages)
+
+#find
+ if "python" in languages:
+  print("python is object oriented")
+
+
+#add item
+ languages.add("php")
+ print(languages)
+
+
+# To remove a specified item, use the remove() method:
+# if value doesnt exists then call raises error
+ languages.remove("a") 
+
+# To remove a specified item, use the discard() method:
+# if value doesnt exists then call is void
+ languages.discard("b") 
+
+# To remove element at the specified index, use the pop() method (or the last item if index is not specified):
+ languages.pop()
+
+
+# To clear the entire list, use the clear() method
+ languages.clear()
+
+#difference :  Returns a set containing the difference between two or more sets
+ s3 = s1.difference(s2)	
+
+#difference_update : 	Removes the items in this set that are also included in another, specified set
+ s1.difference_update(s2)
+
+#intersection() : Returns a set, that are the intersection of to other sets
+ s3 = s1.intersection(s2)	
+
+#intersection_update() : Removes the items in this set that is not present in other, specified set(s)
+ s1.intersection_update(s2)	
+
+# union()	Return a set containing the union of sets
+ s3 = s1.union(s2)
+
+# update()	Update the set with the union of this set and others
+ s1.update(s2)
+
+
+Dictionary
+==============
+A dictionary is a collection which is unordered, changeable and indexed. 
+In Python dictionaries are written with curly brackets, and they have 
+keys and values pairs.
+
+map= {"maharashtra": "mumbai", "mp":"bhopal", "goa":"panji"}
+
+#access
+ print(map["maharashtra"])
+ print(map.get("goa"))
+
+#display
+ for x in map:
+  print(x, " ", map.get(x))
+
+#display values
+ for x in map.values():
+  print(x)
+
+#add a value
+  map["karnataka"] = "bangalore"
+
+
+#remove a value
+  del map["goa"]
+  map.pop("maharashtra")
+
+#remove lastitem
+  map.popitem() 
+
+#clear the map
+  map.clear()
+
+
+
+
+

@@ -1,0 +1,182 @@
+Inheritance is the mechanism that allows definition
+of derived entities from existing ones.
+
+By inheritance the derived entity gets:
+* Code (Operations)
+* Data (Attributes)
+* Compatibility 
+from the existing one.
+
+The derived entity hosts extended code and data.
+
+In Java:
+ The existing entity is termed as "super class".
+ The derived entity is termed as "sub class".
+ "extends" statement is used to implement inhertiance.
+
+ Example:
+  
+ class A //super class
+ {...}
+
+ class B extends A //sub class
+ {...}
+
+
+Inheritance of Code
+---------------------
+Inheritance of code allows the sub class 
+to access the non private code (methods) 
+of the super class, through its object.
+
+The sub class may override the inherited 
+methods and define extended methods.
+
+Method Overriding
+------------------
+Method Overriding is redefining a non static 
+method in the sub class, retaining the methods 
+signature.
+
+Type Compatibility
+------------------
+Inheritance establishes Type Compatibility
+between the super and the sub class.
+
+Type Compatibility allows a super class
+reference to refer to object of the sub class.
+(Reverse is not true).
+
+Using a super class reference that refers 
+to object of the sub class, only the inherited 
+and overridden code are accessible.
+The extended code defined by the sub class is 
+not accessible.
+ 
+Binding
+-----------
+Binding is linking a method call with a method 
+definition.
+
+Ideally binding is the role of the compiler.
+For binding the compiler needs:
+ * Type of object
+ * Method signature
+
+By the type of object, it decides the
+method dispatch table to use.
+By the method signature it decides the
+method definition to invoke.
+
+
+When the two needed attributes are
+available the binding is performed.
+
+As the method call is bound with the
+method definition by the compiler, so
+the procedure is termed as compile 
+time binding.
+
+Or also called as early binding because
+it is done before the program executes.
+
+	
+Runtime Binding
+-----------------
+When an overridden method is invoked using 
+a super class reference then the compilers 
+signature matching technique fails to bind.
+
+Reason 1) Type of object may change hence
+which method dispatch table to use is not clear.
+Reason 2) Multiple definitions (with the same 
+signature) of the overridden method are available.
+
+At execution time system encounters an unbound
+method call.
+So for binding it:
+1) Activates RTTI mechanism on the reference.
+This detects the type of object used to call the method.
+This helps decide the method dispatch table.
+2) Refering the correct method dispatch table
+and by matching the signature, system would bind the
+call with a definition and invoke the definition.
+
+This process is termed as dynamic method dispatch
+or runtime binding or late binding.
+This process is applied per call to the method.   
+
+
+ 
+Inheritance of Data
+--------------------------
+System implements inheritance of non static data members of 
+a class, as object of the sub class is created.
+
+Known that object creation is 
+a 3 step process.
+ * Memory Allocation
+ * Execution of non static initializer block
+ * Execution of the constructor.
+
+So for an object of the sub class:
+* A composite block of memory is allocated that is formed
+by a combinition of non static data members of the super class
+and the sub class.
+
+* Execution of non static initializer block and the constructor of the super class.
+The two act on (initialize) the super class portion of the object.
+
+* Execution of non static initializer block and the constructor of the sub class.
+The two act on (initialize) the sub class portion of the object.
+
+
+FYI:
+-----
+On creation of object of the sub class, binding with the constructor 
+of sub class is according to the parameters.
+
+But by default, the default constructor of the super class would be bound.
+
+The default behaviour can be modified by explicit specification of 
+"super(parameters)" as the first statement in the sub class constructor.
+
+Q) What about the inheritance of static data members?
+A) static data members of a class are not  inherited 
+   (a copy is not made availabe for the sub classes).
+   Rather the static data member is accessible (when not 
+   private) to the sub classes.
+
+   One can visualize it as: 
+   A static data member is allocated once for a class and for its sub classes.
+
+
+Abstract methods and classes
+-------------------------------
+Java allows declaration of methods and classes as
+abstract.
+
+Abstract method
+--------------------
+* An abstract method is a method with declaration 
+(signature) only and not definition (body).
+* It makes the class an abstract class.
+* It must be overidden for use.
+
+Abstract class
+------------------
+* An abstract class is a class that cannot be instantiated
+i.e. its objects cannot be created.
+* It contains zero to many abstract methods.
+* It is inherited for for use.
+* It represents abstract entities like Animal, Vehicle, 
+Engine, Shape, etc.
+The abstract entities form a category of entities
+arranged in a hierarchy.
+Each sub entity in the hierarchy can have specific
+behaviour but must override the necessary behaviours 
+of the category.
+ 
+FYI:
+ An abstract class represents the necessary behaviours
+ of the category through abstract methods.

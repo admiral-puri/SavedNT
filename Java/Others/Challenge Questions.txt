@@ -1,0 +1,47 @@
+1) Write a Java program to find where a number is prime number or not.
+
+2) Write a Java program to find where a number is an armstrong number or not.
+
+3) Implement Bubble Sort in Java.
+
+4) Implement circular queue using an array.
+
+5) Implement Merge Sort on array of secondary type.
+
+6) Accept a value as command line argument. Find the next prime number to that value.
+(hint : int x = Integer.parseInt(args[0]); )
+
+7) Make an matrix of size 3x3. Fill it with random numbers. Display  it, transpose it and display it.
+
+8) Make a class StudentResult with name and marks of 3 subjects and average.
+Create 2 objects.
+Use parameterized constructor to initialize the objects with name and marks. 
+Calculate average in the constructor itself from the given marks.
+Make a display method to output the student result.
+
+9) Create a Binary Search Tree in Java.
+It must have create() and inorder() methods.
+Implement recursive inorder.
+Define a derived class D_BST.
+It overrides the inorder() and provides non 
+recursive definition.
+
+From main() call a test() method that
+takes super class reference to accept
+object of BST and of D_BST.
+In test() call create and inorder.
+Study the executing methods. 
+
+
+10) Create 2 arrays of size 1000.
+Fill them with random numbers.
+Create 2 threads to sort the two arrays using bubble sort and quick sort.
+Find the time required to sort in milliseconds.
+Print Statistics.
+
+11) Write a Java program to count the number of vowels in a text file.
+
+12) Write a Java program to copy a folder to a target location. Dedicate one thread per file to be copied.
+
+13) Write a Java program to detect a USB drive as it is connected.
+

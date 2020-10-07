@@ -1,0 +1,92 @@
+Access Specifiers
+---------------------
+Access Specifiers (Modifiers) control
+the usage of members of a class across
+the program.
+
+C++  provides 3 types of access specifiers:
+1) private
+2) protected
+3) public
+
+private
+----------
+Access specifier "private", limits
+the usage of the member to current 
+class only.
+The "private" member is not accessible to:
+ * Derived classes
+ * Other classes
+ * Non member functions
+
+In C++, the members of a class are
+by default "private".
+
+protected
+------------
+Access specifier "protected", limits
+the usage of the member to:
+ * Current class
+ * Derived classes
+
+The "protected" member is not accessible to:
+ * Other classes
+ * Non member functions
+
+public
+---------
+Access specifier "public" puts no limit
+on the access of the member.
+It is accessible across the program.
+i.e. It can be accessed by:
+ * Current class
+ * Derived classes
+ * Other classes
+ * Non member functions
+
+
+
+
+Scope Resolution Operator
+----------------------------
+C++ specifies that a class must
+contain declarations only.
+And the definitions of its member
+functions, constructors, ... should
+be provided outside the class.
+
+When a member function, constructor, ...
+is defined outside the class then
+it resembles a non member.
+
+
+To reflect that 
+1) A function, constructor, ... is a member of the class, definition of which has been provided outside the class.
+2) It is not a non member.
+The signature is modified as follows:
+
+Original:
+ returnType fnName(parameters)
+ {}
+
+Updated:
+ returnType className :: fnName(parameters)
+ {}
+
+
+Here operator :: is the scope resloution
+operator which specifies that the current
+member belongs to a particular class.
+
+
+
+
+friend function
+--------------------
+A friend function is a non member
+function that is granted access of
+all the members of the class to which
+it is set as a friend.
+
+
+

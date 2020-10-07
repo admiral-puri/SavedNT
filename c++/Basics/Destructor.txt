@@ -1,0 +1,17 @@
+Destructor
+-------------
+A Destructor is an object resource deallocater.
+It is a special member of the class, that resembles a function.
+Following are its specialities:
+ * It has the same name as of the class and preceeded by a ~. It has no return type specification.
+ * It is always parameterless. Hence it cannot be overloaded.
+ * It auto executes as life of the object gets over. 
+It must be used to free the resources allocated for and utilized by the object.
+
+
+FYI
+------
+If a class doesnt define a destructor
+then compiler would auto generate a 
+default destructor with empty body.
+It is defined to aid object deallocation process.

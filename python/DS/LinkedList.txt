@@ -1,0 +1,34 @@
+A linked list is a collection of  homogenous data.
+
+It stores its data in linearly arranged elements called as "nodes".
+
+A node stores:
+  * Data
+  * Link to the next node
+
+A linked list supports operations
+like:
+ * create
+ * insert
+ * delete
+ * update
+ * sort
+ * count
+ * search
+ * many more as per custom needs.
+
+The limitation of linked list
+the traversal efficiency O(n)
+because to reach node n, n hops
+are required. 
+
+Being sequential (linear) and homogenous
+the linked list may be used for the same 
+purpose as an array.
+
+Advantage of linked list over an array
+is the ability to expand or shrink in
+size.
+
+Advantage of an array over a linked 
+list is direct access.

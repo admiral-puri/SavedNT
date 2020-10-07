@@ -1,0 +1,19 @@
+Recursion is a mechanism that allows
+a function to invoke itself.
+
+It must  be controlled using some
+base condition, reaching which the
+self invokation stops and recursion
+unwinds.
+
+If not controlled then due to usage
+of a portion of stack space per invokation, 
+the stack segment overflows causing
+abnormal program termination.
+
+It is used to solve certian mathematical
+problems and for traversing hierarchical
+content or data structures.
+
+
+Refer the programs and diagrams.

@@ -1,0 +1,18 @@
+Global Variables
+---------------
+A global variable is a variable that belongs to the program.
+It has the life equal to the life of the program.
+It gets allocated in data segment of RAM.
+It is garbage free by default.
+It can be used by all functions of the program.
+It is used to share data across functions.
+
+If a local variable takes the same name as of the
+global variable then for the function the usage maps
+with the local variable and the global variable gets
+shadowed.
+FYI
+If a local variable takes the same name as
+of a global variable then usage maps with the
+local variable and the global hides (gets shadowed).
+Hence avoid duplicating the names.

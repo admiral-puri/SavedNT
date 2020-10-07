@@ -1,0 +1,66 @@
+class SLL
+{
+ //member variables
+ pointer : head
+
+ constructor()
+ {
+  head = null
+ }
+
+ void create()
+ {
+  pointers : lastpos, pgno
+
+  do
+  {
+   pgno = i need a page
+ 
+   if(head == null)
+    head = pgno;
+   else
+    lastpos.b = pgno;    
+
+ 
+   lastPos = pgno;
+ 
+  }while(ch == 'y');
+
+ }//create
+
+
+ display()
+ {
+  pointer: current 
+  
+  current = head;//begin with the first page
+  
+  while(current != NULL)//until entire list is traversed
+  {
+    print current.a //process
+
+    current = current.b;//navigate
+  }
+
+ }//display
+
+
+
+ size()
+ {
+  pointer: current 
+
+  var cnt = 0
+  current = head;//begin with the first page
+  
+  while(current != NULL)//until entire list is traversed
+  {
+    cnt++;
+    current = current.b;//navigate
+  }
+  return cnt;
+ }//size
+
+
+
+}

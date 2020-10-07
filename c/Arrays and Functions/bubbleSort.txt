@@ -1,0 +1,7 @@
+1) Position i, as boundary, at size -1
+2) Starts j with 0 
+3) If a[j] > a[j+1] then swap
+4) Increment j 
+5) If j < i then go to 3) otherwise to 6)
+6) Decrement i 
+7) If i > 0 then goto 2) otherwise stop

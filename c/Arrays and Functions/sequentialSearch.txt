@@ -1,0 +1,8 @@
+Sequential Search
+-------------------
+Sequential search finds a value across an array or a linked list (set).
+It begins comparison of the value with the first element of the set.
+It compares for equality.
+Comparison progresses sequentially.
+If a match is found, comparison stops with FOUND status.
+If a match is not found, comparison stops at end of the set with a NOTFOUND status (-1 or NULL).

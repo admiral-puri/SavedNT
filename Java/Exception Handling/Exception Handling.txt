@@ -1,0 +1,151 @@
+Exception
+------------
+Exceptions are runtime errors that cause 
+abnormal program termination.
+
+Aim
+------
+An application must not terminate abnormally 
+and in case a run time error (exception) 
+occurs the current sub activity must be skipped 
+and next sub activity be continued with.
+
+
+Exception Handling
+----------------------
+Exception Handling is a mechanism to protect 
+an application from abnormal termination due 
+to execptions.
+
+
+Procedure
+------------
+* The code that is likely to cause exceptions 
+is enclosed in a try block.
+
+* Associate one to many catch blocks with a 
+try to handle all the exceptions that may arise.
+
+* Optionally associate finally block to have a 
+"must execute" portion of code.
+
+* In case of sub operations having dependent 
+sub operations do not handle the exceptions locally
+rather transfer them to the caller using throws. 
+
+
+Definitions
+---------------
+try
+-----
+A try block is an exception monitor.
+It encloses the code that may cause exceptions.
+If no exception occurs, all code of the try executes normally.
+But if an exception occurs inside try, it avoids termination 
+of the program and tarnsfers the program control to a catch 
+block for handling.
+
+
+catch
+-------
+A catch block is an exception handler.
+It neutralizes the raised exception and makes the program control 
+resume with the next activity.
+
+A catch can handle a particular type of exception only.
+
+Code of catch executes only if an exception corresponding to it occurs,
+otherwise not.
+
+finally
+---------
+finally block hosts program code that must execute in all cases.
+1) Case no exception occurs.
+2) Case exception occurs and gets handled.
+3) Case exception occurs but doesn't gets handled.
+
+When some resource is allocated in try then it can be deallocated 
+in finally.
+
+
+throws
+----------
+"throws" statement is a notification to the caller method, 
+that this method may raise exceptions but wont handle them, 
+instead the same would be transferred on to the caller method.
+
+And hence the exception handling be performed by the caller method.
+
+
+throw 
+-------
+throw statement is used to generate (raise) an exception.
+It takes the syntax :
+  throw <object of Exception or its sub class>
+
+
+
+Checked and Unchecked Exceptions
+-----------------------------------
+Compiler classifies exceptions as :
+1) Checked Exceptions
+2) UnChecked Exceptions
+
+Checked Exceptions 
+---------------------
+Checked Exceptions are exceptions for 
+which if handling is not done then the
+compiler raises errors and stops the build.
+
+A Checked Exception would propogate only 
+if throws is used.
+
+
+UnChecked Exceptions 
+---------------------
+UnChecked Exceptions are exceptions 
+for which if handling is not done yet 
+the compiler allows the build.
+
+An Unchecked Exception would auto propogate
+(even without throws).
+
+User Defined Exceptions
+-----------------------
+Java allows creation of user defined exception 
+by definition of a class that extends Exception.
+
+An application creates it own exceptions to 
+handle logical issues corresponding to it.
+
+It is the responsibility of the application code to :
+1) Identify a logical issue.
+2) Raise an exception.
+
+To raise an exception :
+1) Create object of Exception or of its sub class.
+2) throw <object>
+
+
+Generic Exception Handler
+------------------------
+Exception being the "used super class" for exceptions in Java.
+
+(Throwable class is the super class for all exceptions in Java. 
+Refer Throwable Hierarchy.png)
+
+Also known that a super class reference can refer to 
+objects of itself as well of all of its sub classes.
+
+So a catch block that uses Exception reference can 
+be used to handle all possible exceptions.
+
+Such a catch block is known as "generic exception handler".
+
+For a try one exception can be handled only once.
+i.e. duplicate catch handlers are not allowed for a try.
+
+Hence if defined the generic exception handler catch block, 
+must be the last catch in the set of catch blocks for a try.
+
+

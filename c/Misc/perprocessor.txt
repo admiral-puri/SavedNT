@@ -1,0 +1,20 @@
+Preprocessor and Directives
+---------------------------
+Preprocessor is a compile time tool that
+executes it directives to affect the source code.
+After the preprocessor action, the compiler
+converts the code into binary executable.
+
+The preprocessor tool is represented by the symbol #
+Its directives (commands) are:
+ #include : To include the contents of a header file at the current place in the code.
+ #define : To define a macro. A macro is a token replacement mechanism. All the occurrence of the macro are replaced by its value.
+ #undef : To undefine a macro.
+
+ Macro based conditional compilation:
+ #ifdef : if a macro is defined
+ #ifndef : if a macro is not defined
+ #if : macro comparison
+ #elif : macro comparison
+ #else : an else to the above
+ #endif : an endif to the above

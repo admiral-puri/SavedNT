@@ -1,0 +1,42 @@
+When system needs to create a copy
+of an object, as in case of pass
+by value, then system uses a memory
+copy method. 
+
+It is a method that fetches every 
+byte of the source and updates the 
+target. 
+So the target becomes a duplicate
+of the source.
+It is a shallow copy method.
+
+If for an application shallow copy
+works fine then the application can
+continue as it is.
+
+But if deep copy is required or
+if the application wants to take
+charge of creating duplicates of
+an object then the application 
+must define a "Copy Constructor".
+
+
+A copy constructor is a special
+constructor of the class that takes
+a single parameter that should be
+object of the same class received
+by reference.
+
+Known that when a constructor is
+invoked then some object is under
+creation. 
+For a copy constructor that object 
+is the destination of copy and the 
+parameter object is the source of copy.
+
+
+
+
+
+
+

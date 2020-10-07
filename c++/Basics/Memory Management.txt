@@ -1,0 +1,66 @@
+Memory Management
+-----------------------
+Known that a program is made up of:
+* Code
+* Data
+
+Data of the program is represented by
+variables, arrays, objects, etc.
+They are atomic or composite blocks in 
+memory.
+
+The memory blocks need to be :
+ * Allocated
+ * Used
+ * Deallocated
+
+Such memory management can be done 
+* By the system
+* By code
+
+System Managed Memory
+-------------------------
+When a program obtains memory by declaration
+method then its memory is system managed.
+Examples :
+  int a;
+  int arr[5];
+  Myclass m;
+
+Life of such blocks is limited to the scope  of declaration.
+The quantity of such memory blocks must be precalculated.
+Such blocks are ideally declared in STACK or DATA segment of RAM.
+Such blocks can be used by their name or by their address.
+
+Code Managed Memory
+-------------------------
+When a program obtains memory by allocation
+method then its memory is code managed.
+Examples :
+  int * ptr1 = new int[5];
+  Myclass * ptr2 = new Myclass();
+
+Life of such blocks is : 
+* Until deallocated by code (using delete).
+* Until program runs
+
+The quantity of such memory blocks can vary at runtime.
+
+Such blocks are declared in HEAP segment  of RAM.
+
+Such blocks can be used by their address.
+
+=================================================
+Operator new and delete
+------------------------
+Observe the use of operators new and delete for code managed memory.
+
+Operator new :
+1) Dynamically allocates a memory memory block of a particular type.
+2) Allocation is in HEAP segment of RAM.
+3) Such a memory block has custom life.
+4) Such a memory block is accessible through its address.
+
+Operator delete:
+1) Dynamically deallocates the memory blocks that were allocated using Operator new.
+2) After deallocation the pointer that referred to the memory block must not be dereferenced. It would cause illegal memory access.

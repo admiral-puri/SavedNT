@@ -1,0 +1,11 @@
+Boolean
+---------
+Boolean is a datatype that represents 2 value:
+ TRUE
+ FALSE
+
+C has no dedicated type to represent boolean.
+int does the role of boolean as well.
+
+int value ZERO represents FALSE
+All NON ZERO int values represent TRUE

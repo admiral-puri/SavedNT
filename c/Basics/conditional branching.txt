@@ -1,0 +1,67 @@
+Conditional Branching
+=======================
+By default system executes every program statement.
+But sometimes it is desired to:
+EXECUTE some portion of code and SKIP another portion of code.
+This can be achieved through CONDITIONAL BRANCHING of program statements.
+
+C supports conditional branching in 3 ways:
+1) if statement 
+2) switch statement
+3) trenary operator
+
+if statement
+--------------
+if statement is used for conditional branching of program code.
+i.e. it allows execution of one portion of code and skip the other or vice-versa.
+
+if has:
+* a criteria (condition)
+* a block of code
+associated with it.
+
+System would always solve the criteria associated with if.
+When the result is true, system would execute the block 
+of code associated with if.
+But when the result is false then system would skip the 
+execution of the block of code associated with if.
+
+else if statement
+------------------
+else if statement represents a secondary criteria
+based on the "FALSE" state of a primary criteria
+represented using an "if" statement.
+
+System evaluates an "else if" only when the criteria
+that preceeds it is "FALSE".
+On evaluation if its (else if) result is "TRUE" then its
+(else if) block of code executes, otherwise not.
+
+
+else statement
+-----------------
+else statement is optionally associated with an "if" or an "else if" statement.
+It (else) has a block of code associated.
+Its block of code executes only when the preceeding
+"if" or "else if" criteria evaluates to FALSE, otherwise not.
+
+switch statement
+------------------
+"switch" selection statement is used for conditional 
+branching of program code.
+In this sense it is similar to an "if" statement.
+
+Details:
+* switch takes an "int" or a "char" variable as its criteria.
+* switch compares the value for equality only.
+* Comparison is with case blocks that are enclosed in switch.
+* Every case is represented through one unique constant value (int or char).
+* Code to execute or skip is inside the case blocks.
+* Code of the case block, value of which matches with the switched variable, executes. Code of the rest case blocks skip.
+* A "default" block may be defined to have code that execute when none of the case values match with the value of the switched variable.
+* Any case block can be defined in any order of value.
+* Every case must have "break" statement as its last statement. This avoid auto execution of next case. i.e. If "break" is missing then next (following) case would auto execute.
+
+ternary operator
+-------------------
+see ternary.png

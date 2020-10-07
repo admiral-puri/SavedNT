@@ -1,0 +1,6 @@
+Q) What happens if an object is outputted using System.out.println method?
+A) Known that every class is by default a sub class of the class Object.
+The class Object defines a method : public String toString()
+It gets auto invoked on print.
+The inherited definition returns a String of lesser meaning.
+But if overridden then the method can return a value meaningfull and corresponding to the class.

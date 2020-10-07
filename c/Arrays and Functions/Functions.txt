@@ -1,0 +1,127 @@
+Functions
+------------
+A function is a block of code that performs
+a subtask for the program.
+(Infact a program is a collection of functions.)
+
+Design
+---------
+A function is made up of 2 parts.
+1) Signature
+2) Body
+
+1) Signature notifies the purpose of a function.
+   Signature is composed of 3 parts:
+   1.1) return type
+   1.2) function name (unique)
+   1.3) function parameters
+2) Body of the function implements its purpose.
+
+Examples: 
+-----------
+void bubbleSort(int[]) 
+{ 
+ logic of bubbleSort
+}
+void inorder(Tree*) 
+{ 
+ inorder traversal of a Tree
+}
+void reverse(String) 
+{ 
+ logic for string reverse
+}
+
+
+Execution :
+------------
+A function executes on call, otherwise not.
+OS begins the program by calling (invoking)
+the main() function.
+main() function contains code and calls to
+other functions.
+Even other function call one another.
+As a function is called the program control
+transfers from the point of call to the
+definition of the function.
+Next the code of the function executes.
+On completion the program control returns 
+back to the point following the call to the function.
+Finally as main() completes the program control
+returns to the OS.
+
+Data Sharing across functions
+-----------------------------
+Data (variables, arrays, objects) declared in a function 
+is local to the function.
+It can be used in the function, but cannot be 
+directly accessed in other functions of the program.
+
+If data (variables, arrays, objects) of a function is
+to be made available in other functions then it must 
+be shared.
+
+The data that a caller function passes to the called 
+function is termed as "Parameters".
+0 to many parameters can be passed.
+
+The data that a called function passes back to the 
+caller function is termed as "Return Value".
+0 or 1 value can be returned.
+
+Parameters
+------------
+Parameters are values that are shared (passed) by the 
+caller function to the called function.
+
+Classification:
+Parameters are classified as:
+ Actual Parameters
+ Formal Parameters
+
+Actual parameters are the values that the caller function passes.
+Formal parameters are the variables, arrays, ... that receive the data of the actual parameters.
+
+The actual and the formal parameters must match in :  count, datatype and order.
+
+Pass By Value:
+When system makes formal parameter a copy
+of the actual parameter then the data sharing
+approach is termed as "Pass By Value".
+
+Changes made to the formal parameter doesnt
+affect the actual parameter.
+
+Variables and objects are passed by value.
+
+Pass By Reference:
+When system makes formal parameter refer to
+the memory of actual parameter then the data 
+sharing approach is termed as "Pass By Reference".
+
+Changes made to the formal parameter affect 
+the memory of actual parameter.
+
+Arrays are passed by reference.
+
+
+Return Value
+--------------
+The data that a called function passes back
+to the caller function is termed as "Return Value".
+
+0 or 1 value can be returned using the "return"
+statement.
+
+When a (one) value is returned then its datatype
+is set as the return type of the function.
+
+When no value is returned then "void" is set as
+the return type of the function.
+
+return:
+* return statement terminates the called function and 
+  makes the program control go back to the caller function.
+* return statement can have 0 or 1 value associated.
+* It is optional for the caller function to receive the 
+  returned value.

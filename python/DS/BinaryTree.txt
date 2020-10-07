@@ -1,0 +1,32 @@
+                  TREE
+
+Definition
+------------
+A tree is a homogenous data structure.
+It arranges its data in a hierarchical order.
+The top of the hierarchy is marked by a root node. 
+Then there are child nodes which further
+have more child nodes.
+Finally the nodes that mark the bottom portion 
+i.e. the nodes that donot have any further child 
+nodes are termed as leaf nodes.
+
+A binary tree is a tree in which every node has: 
+* 1 predecessor (exception is the root node)
+* 0-2 successors.
+
+
+Design
+--------
+A binary tree node has 3 parts :
+ 1) Pointer/Reference to the left child.
+ 2) Data
+ 3) Pointer/Reference to the right child.
+
+In case the left or the right child doesnt
+exist then the respective pointer or reference
+is set as NULL.
+
+Note : 
+For a binary tree having n nodes there are 
+n+1 NULL pointers. 

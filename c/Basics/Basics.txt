@@ -1,0 +1,43 @@
+What is a Computer?
+A Computer is a device that can execute programs.
+
+What is a Program?
+A Program is a software that is designed to perform a particular task.
+
+A program is made up of :
+ CODE
+ DATA
+
+CODE:
+ Code means instructions.
+
+RULE:  
+ All program code must be enclosed into a function. 
+
+Function:
+ A function is a set of instructions.
+ It is identified by a unique name.
+ It performs a sub task for the program.
+ A function requires a call for execution.
+ An exception to this is the main function that is called by the OS.
+
+----------------------------------------
+
+DATA:
+ Data means information.
+ Information is of 2 types
+ 1) Input 
+ 2) Output
+ Input is the information that a program gets.
+ Output is the information that a program generates.
+
+RULE:
+ All program data must be stored into variables.
+
+Variable:
+ A variable is a reserved block in memory (RAM).
+ It is identified by a unique name.
+ It allows storage and retrieval of data.
+ It can store only one value at a time. 
+ Its value can change.
+

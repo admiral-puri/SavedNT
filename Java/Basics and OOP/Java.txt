@@ -1,0 +1,150 @@
+Java
+-------
+What is Java?
+Java is an Object Oriented and a Platform
+Independent programming language.
+
+
+Object Oriented Programming
+-------------------------------
+OOP is a programming paradigm that uses concepts like
+ * Encapsulation
+ * Polymorphism
+ * Inheritance
+ * Abstraction
+for application development.
+
+Encapsulation:
+ Encapsulation is binding operations (code) 
+ and attributes (data) of an entity into 
+ one respective unit.
+
+ Example:
+ class Stack
+ {
+  //data
+  int data[];
+  int top;
+
+  //code
+  void push(int) {...}
+  int pop() {...}
+
+ }//Stack
+
+ FYI : Making a class is implementing encapsulation.
+
+
+Polymorphism:
+ Polymorphism is the ability of an object
+ to perform a task in multiple ways.
+
+
+ class Billing
+ {
+  void payment(card) {code 1}  
+  void payment(cash) {code 2}  
+  void payment(loyaltypoints) {code 3} 
+ }
+
+
+Inheritance:
+ Inheritance is a mechanism that allows
+ creation of derived entities from existing
+ ones.
+ The derived entites extend the behaviour.
+
+
+ class Clock
+ {
+  int h,m,s;
+
+  void setTime() {...}
+  void displayTime() {...}
+  void updateTime() {...}
+ }
+
+ class AlarmClock inherits Clock
+ {
+  //extensions 
+  int ah, am;
+  void setRingtone() {...}
+  void playRingtone() {...}
+  void snooze() {...} 
+ }
+
+
+Abstraction
+ Abstraction is exposing operations of an
+ object while hiding its implementation and
+ sub operations.
+
+ The user of the object knows what an
+ object does but doesnt know how it does.
+
+
+ class ShopKeeper
+ {
+  public sellCandy()
+  {
+    openJar();
+    selectCandyColorwise();
+    ...
+  } 
+
+  private openJar(){ ... }
+  private selectCandyColorwise() {...}
+
+ }
+
+ By abstraction implementation 
+ of objects behaviour may be 
+ felexibly modified/upgraded. 
+
+
+Platform Independence
+--------------------------
+Platform Independence is the ability of 
+a binary file (compiled) to execute on 
+multiple platforms (OS).
+
+Q) Why a binary file becomes platform dependent?
+A) A program (application) developed using 
+a particular language (say C) uses the API 
+(header files in case of C) provided by the 
+respective language.
+
+These API internally use/access OS API.
+
+Hence on compilation the program becomes 
+OS compatible and OS dependent.
+
+Such compiled programs do not run on other OS.
+
+
+Q) How a Java binary file becomes platform independent?
+A) A program (application) developed using 
+Java uses the Java API.
+
+These API doesnt use/access OS API, rather 
+uses or access features and functions provided 
+by JVM (Java Virtual Machine).
+
+On compilation a binary executable file
+(called as bytecode) gets generated.
+
+Such a compiled program is compatible to 
+JVM and directly not to any OS.
+
+Oracle Corp (Earlier Sun Microsystems) 
+develops JVM's corresponding to every OS.
+
+These JVM's get the "bytecode" of Java 
+application, convert that into underlying 
+OS compatible form and execute.
+
+By this the Java program gets platform independence.
+
+(See the diagram : PI.png)
+
+   

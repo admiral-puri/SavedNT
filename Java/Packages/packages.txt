@@ -1,0 +1,55 @@
+Package
+----------
+A package is a collection of classes,interfaces and nested packages.
+
+A package is used to form:
+ * Java API
+ * Java Applications (Project)
+
+Creation
+-------------
+* To create a package, create a directory
+of the same name as of the package.
+
+* Define the necessary classes or interfaces 
+with the package statement as their first
+statement and store them in the package directory.
+
+Usage
+--------
+If an application is made, then the package
+is converted to a jar/war/ear for execution.
+
+If an api is made, then the classes/interfaces
+of the package are "imported" and readily used.
+
+
+import
+--------
+import statement is used to get access of the
+public classes and interfaces of a package.
+
+
+To resolve import JVM uses the "CLASSPATH".
+CLASSPATH is the list of "package locations".
+
+For Windows:
+ location1;location2;location3
+
+For Linux:
+ location1:location2:location3
+
+
+CLASSPATH can be set in 2 ways:
+ * OS level environment variable (a permanent list of package locations)
+ * compile/execution option (a temporary list of package locations)
+
+
+FYI
+-----
+If a java class is not put in any package then 
+the system considers it to be in a no-name package 
+that spans the current directory. 
+
+The class can be directly used by other classes 
+of the same directory but cannot be imported.

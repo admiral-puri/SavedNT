@@ -1,0 +1,44 @@
+Q) Imagine yours is a program to run in an ATM machine.
+Its accepts an amount from the user and decides the 
+various currency denominations like : 100, 500 and 2000.
+The program must tender best combination so that the 
+user finds the result convinient.
+===========================================
+Q) Find the permutations of a n letter string
+===========================================
+Q) Find the combinations of a n letter string
+===========================================
+Q) Implement Bucket Sort in C++
+================================================
+Q) Implement a Stack Using Array
+================================================
+Q) Design a Class Complex  with data members for real and imaginary part.
+   Provide default and parameterized constructors.
+   Write a program to perform arithmetic operations of two complex numbers using operator overloading.
+   Also support outputting the complex number using cout.
+================================================
+Q) Make a generic class to represent a matrix and 
+   support matrix operations like addition and multiplication.
+
+   try for int and object types
+================================================
+
+===========================================
+Define a String class with operations implemented 
+by overloaded operators.
+= string copy
+==, >, < string comparison
+~ toggle case 
+! string length
+===========================================
+Write a program to read a file and 
+display it in uppercase
+===========================================
+Write a program to count the number of 
+vowels in a text file
+===========================================
+Implement template class matrix with any 
+4 generic operations. 
+(scan, display, transpose and search).
+===========================================
+

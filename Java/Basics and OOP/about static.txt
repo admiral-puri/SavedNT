@@ -1,0 +1,12 @@
+static: 
+  initializer blocks
+   -- like constructor for static data members.
+
+ data members
+   -- Allocated once for the class (and not per object)
+      e.g. Alarm.volume
+
+ methods
+   -- Accessible without object.
+      e.g. Alarm.setVolume(5)
+        

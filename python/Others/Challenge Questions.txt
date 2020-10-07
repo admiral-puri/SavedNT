@@ -1,0 +1,18 @@
+Accept n numbers from the user in a list (collection)
+
+Iterate over the list and detect whether the 
+current value is positive or negative.
+
+If positive then put that value into posLinkedList.
+If negative then put that value into negLinkedList.
+
+Display the two linked lists.
+
+==========================================================
+
+Create a linked list.
+Write a function to delete all the nodes with prime number value.
+Display the linked list.
+
+==========================================================
+Convert C or C++ assignments into python

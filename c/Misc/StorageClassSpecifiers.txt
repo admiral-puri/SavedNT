@@ -1,0 +1,46 @@
+Storage Class Specifiers 
+-----------------------
+Storage class specifiers decide the allocation location of a variable.
+
+An applications memory is divided into 4 segments
+1) Code Segment  (code of the program)
+2) Data Segement (global and static variables)
+3) Heap Segment (dynamic memory allocation)
+4) Stack Segment (local variables)
+
+C supports 4 types of storage class specifiers.
+1) auto
+2) register
+3) static
+4) extern
+
+auto
+-------
+auto is the default access specifier for local variables.
+It makes the system allocate the local variable in Stack segment of RAM.
+The variables get local life and usage.
+The variable contain garbage by default.
+It cannot be applied to global variables.
+
+register
+--------
+register requests that the local variable being declared
+possibly be allocated in CPU registers, instead of any 
+segment of RAM.
+
+This is done to optimize access.
+
+If request is granted allocation will be done in CPU registers
+otherwise the variable will be treated like an auto variable.
+
+
+static
+--------
+Refer : static.c and static.png
+
+extern
+--------
+extern specifies that the variable/function being
+declared and used here (in this module) will be
+defined in some external module that this module
+is importing/including.

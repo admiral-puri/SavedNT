@@ -1,0 +1,37 @@
+Array of Secondary Types
+-------------------------
+In C++, data types can be classified as : 
+1) Primary
+2) Secondary
+C++ allows creation of arrays of primary and secondary types.
+
+Syntax:
+  datatype arrName[arrSize];
+
+Examples:
+  int arr[10];
+  Player team[11];
+  Student batch[60];
+
+For a primary datatype the array elements are variables of the type.
+
+For a secondary datatype the array elements are objects of the type.
+
+By default, the default constructor is invoked to initialize the array elements (objects).
+
+Inorder to invoke the constructors of choice, an array initializer must be used.
+Hence, object creation statement  updates as :
+
+Myclass arr[3] = {Myclass(), Myclass(1,2), Myclass(11,22) };
+
+In case the initializer hosts less number of constructor calls 
+as compared to array size then for the remaining elements
+(objects), the default constructor acts.
+
+In case the initializer hosts constructor calls beyond array 
+size then compile time warning or error would raise.
+
+
+FYI
+-------
+One uses array of objects to facilitate  applications of algorithms.

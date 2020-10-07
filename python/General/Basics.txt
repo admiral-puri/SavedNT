@@ -1,0 +1,160 @@
+Creating Variables
+Unlike other programming languages, Python has no command for declaring 
+variables i.e. variables need not be declared with any particular type. 
+It gets auto defined the moment a value is assigned to it and can even 
+change type/value by reassignment.
+
+Python variables name:
+ * must start with a letter or the underscore character
+ * cannot start with a number
+ * can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+ * are case-sensitive
+
+
+
+Arithmetic Operators
+--------------------------
++	Addition		x + y	
+-	Subtraction		x - y	
+*	Multiplication		x * y	
+/	Division		x / y	
+%	Modulus			x % y	
+**	Exponentiation		x ** y	 
+//	Integer division	x // y
+
+
+
+Assignment Operators
+--------------------------
+
+=	x = 5			x = 5	
++=	x += 3			x = x + 3	
+-=	x -= 3			x = x - 3	
+*=	x *= 3			x = x * 3	
+/=	x /= 3			x = x / 3	
+%=	x %= 3			x = x % 3	
+//=	x //= 3			x = x // 3	
+**=	x **= 3			x = x ** 3	
+&=	x &= 3			x = x & 3	
+|=	x |= 3			x = x | 3	
+^=	x ^= 3			x = x ^ 3	
+>>=	x >>= 3			x = x >> 3	
+<<=	x <<= 3			x = x << 3	
+
+
+Comparison Operators
+--------------------------
+
+==	Equal				x == y	
+!=	Not equal			x != y	
+>	Greater than			x > y	
+<	Less than			x < y	
+>=	Greater than or equal to	x >= y	
+<=	Less than or equal to		x <= y
+
+
+Logical Operators
+--------------------------
+
+and 	Returns True if both statements are true		x < 5 and  x < 10	
+or	Returns True if one of the statements is true		x < 5 or x < 4	
+not	Reverse the boolean 					not(x < 5 and x < 10)
+
+
+Identity Operators
+--------------------------
+
+is 	Returns true if references refer to same object		x is y	
+is not	Returns true if references refer to different objects	x is not y
+
+
+Bitwise Operators
+--------------------------
+
+& 	AND			Sets each bit to 1 if both bits are 1
+|	OR			Sets each bit to 1 if one of two bits is 1
+^	XOR			Sets each bit to 1 if only one of two bits is 1
+~ 	NOT			Inverts all the bits
+<<	Zero fill left shift	Shift left by pushing zeros in from the right and let the leftmost bits fall off
+>>	Signed right shift	Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+
+
+Conditional Branching
+-------------------------
+if condn:
+ statement1
+ statement2
+ ...
+ statementN
+elif condn:
+ statement1
+ statement2
+ ...
+ statementN
+else:
+ statement1
+ statement2
+ ...
+ statementN
+ 
+example:
+------------
+a = 200
+b = 33
+
+if a == b:
+  print(a, " equals ", b)
+elif a > b:
+  print(a, "is greater than ",b)
+else:
+  print(b, "is greater than ",a)
+
+
+Loops
+--------
+init
+while condn:
+ statement1
+ statement2
+ ...
+ statementN
+ reinit
+
+
+break and continue keywords have same loop controlling effect.
+
+example:
+------------
+i = 1
+while i < 10:
+  print(i)
+  i += 1
+
+
+i = 1
+while i < 10:
+  print(i)
+  if i == 5:
+    break
+  i += 1
+
+
+
+i = 1
+while i < 10:
+   
+  if i == 5:
+    i+=1
+    continue
+  print(i)
+  i += 1
+
+
+A for loop is used for iterating over a sequence 
+(that is either a list, a tuple, a dictionary, a set, or a string).
+This is less like the for keyword in other programming language, 
+and works more like an iterator method as found in other programming languages.
+
+
+
+

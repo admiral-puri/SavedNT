@@ -1,0 +1,9 @@
+1) Position i, as boundary, at 0
+2) Assume i as min
+3) Start j with i+1
+4) If a[j] < a[min] then min = j
+5) Increment j 
+6) If j < size then go to 4) otherwise to 7)
+7) If min != i then swap arr[min] and arr[i]
+8) Increment i 
+9) If i < s-1 then goto 2) otherwise stop

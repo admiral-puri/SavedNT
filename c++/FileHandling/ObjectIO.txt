@@ -1,0 +1,84 @@
+//Program to test w/r of objects
+
+#include<iostream>
+#include<fstream>
+#include<cstring>
+
+using namespace std;
+
+class Student
+{
+  int rno;
+  char name[20];
+  double percentage;
+
+public:
+  Student();
+  Student(int, char[], double);
+  void display();
+};
+
+Student:: Student()
+{
+  rno = 0;
+  strcpy(name, "");
+  percentage = 0;
+}
+
+Student :: Student(int r, char n[], double p)
+{
+  rno = r;
+  strcpy(name ,n);
+  percentage = p;
+}
+
+void Student :: display()
+{
+  cout<<"\n Roll No. : "<<rno;
+  cout<<"\n Name : "<<name;
+  cout<<"\n Percentage : "<<percentage;
+}
+
+int main()
+{
+  char fname[30] = "e:/object.txt";
+  //open the file for i/o
+
+  fstream fio(fname, ios::in|ios::out|ios::binary|ios::trunc);
+
+  //test open state
+  if(!fio.is_open())
+  {
+    cerr<<"\n File Open Failed ";
+    return 1;
+  }
+
+  //file is open
+  Student s1(10, "Anil", 67.89);
+  Student s2;
+
+
+  //Write the object
+  //Address of object and size of object are passed as parameters to the write function.
+  //The function dereferences the object byte by byte and writes it into the file.
+  fio.write((char*)&s1, sizeof(s1));
+
+  //position the file read pointer at BOF
+  fio.seekg(0, ios::beg);
+
+  //read back the object
+  //Address of object and size of object are passed as parameters to the read function.
+  //The function reads data from the file and writes into the object byte by byte.
+  //The function returns NULL @ EOF.
+  fio.read((char*)&s2, sizeof(s2));
+
+
+  //close the file
+  fio.close();
+
+  //proof
+  s1.display();
+  s2.display();
+
+  return 0;
+}

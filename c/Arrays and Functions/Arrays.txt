@@ -1,0 +1,50 @@
+Array
+--------
+* An array is a collection of homogenous data.
+* It stores the data in a linear manner.
+
+Allocation and Storage:
+* A continuous block of memory is allocated for the array.
+* It takes a fixed size.
+* It cannot be expanded or shrinked later.
+* It is auto split into identical units called elements.
+* One element stores one value. It is equivalent to a variable.
+
+Access:
+* Array has a name for identification.
+* Array elements are automatically indexed from 0 to SIZE -1.
+* Combination of arrayName[elementIndex] is used for access (read/write).
+
+To create an array C provides 2 methods:
+ 1) Declaration
+ 2) Allocation
+
+Declaration method uses following syntax:
+    datatype arrayName[arraySize];
+Example:
+    int arr[6];
+
+The memory is allocated either in stack or data segment of RAM.
+Rules:
+* datatype can be any primary or secondary type (other than void).
+* arrayName can be a valid identifier without any spaces, beginning with a character or a symbol.
+* arraySize must be a postive whole number.
+
+
+Allocation method used dymanic memory management 
+through appropriate use of malloc, calloc, realloc and
+free functions.
+The memory is allocated in heap segment of RAM.
+
+
+FYI:
+Array size cannot be negative.
+Array size can be zero but such a declaration cannot be used.
+Maximum size of array depends on the application and system.
+One array element is equal to one variable.
+Use loops for processing the arrays.
+
+Why Arrays?
+Arrays support group processing.
+Arrays support application of algorithms.
+Arrays support direct access.

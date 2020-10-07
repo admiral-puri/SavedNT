@@ -1,0 +1,107 @@
+Programs Memory
+------------------
+As a program begins (a process starts) OS
+allocates a portion of main memory (RAM) for it.
+The applications memory is segmented into 
+4 parts.
+ a) Code Segment
+ b) Data Segment
+ c) Heap (Extra) Segment
+ d) Stack Segment
+
+Code Segment is loaded with the program code (functions).
+Data Segment is the home for global and static variables/arrays/...
+Heap Segment is used for dynamic memory allocations.
+Stack Segment is used by the local variables/arrays/...
+
+Memory Management
+---------------------
+Memory Management is about allocation, use and 
+deallocation of memory for variables, arrays, objects, 
+etc.
+
+The variables, arrays, objects, etc of an application get 
+allocated /declared in either of the 3 segments.
+a) Data Segment
+b) Heap Segment
+c) Stack Segment
+
+An application obtains memory in 2 ways:
+a) Declaration (Automatically Managed)
+b) Allocation (Code Managed)
+
+Declaration 
+-------------
+Declaration method uses following approach:
+ datatype varName;
+ datatype arrName[SIZE];
+ datatype * ptrName;
+
+Memory obtained by declaration method gets
+allocated in Data or Stack segment.
+
+Such memory blocks are system managed,
+i.e. their life is auto controlled by the system.
+As they come into scope they get declared
+and as they go out of scope they deallocate
+automatically.
+
+Such memory blocks are accessible in 2 ways
+a) By their name.
+b) By their memory location.
+
+Allocation
+-------------
+Allocation method uses functions like:
+malloc(), calloc(), realloc() and free() 
+for memory allocation and deallocation.
+
+Memory obtained by allocation method gets
+allocated in Heap segment.
+
+Such memory blocks are code managed i.e. 
+their life is controlled by the logic of the 
+program.
+They get allocated on call to malloc() or calloc()
+and deallocate on call to free().
+
+Such memory blocks are accessible by their 
+memory location only.
+
+Details:
+
+malloc()
+----------
+malloc is a ready function from stdlib.h or alloc.h
+It allocates memory for program data.
+It takes size of memory block as parameter.
+Next it allocates the required sized memory block in heap segment.
+And returns the address of the memory block in void pointer form.
+If malloc fails, it returns NULL.
+The memory is garbage filled by default.
+
+calloc()
+----------
+calloc is a ready function from stdlib.h or alloc.h
+It allocates memory for program data.
+It takes : "number of units" and "size of 1 unit" as parameter.
+Next it allocates the required sized memory block in heap segment.
+And returns the address of the memory block in void pointer form.
+If calloc fails, it returns NULL.
+The memory is clear by default.
+
+realloc()
+-----------
+realloc is a ready function from stdlib.h or alloc.h
+It stretches or shrinks the memory block allocated using malloc or calloc.
+It takes and returns the address of the memory block.
+In case of expansion the data is preserved.
+
+free()
+-------
+free is a ready function from stdlib.h or alloc.h
+It deallocates memory allocated using malloc or calloc.
+It takes the address of the memory block as parameter and deallocates it.
+The pointer must not be dereferenced after free (its a dangling pointer).
+The memory block will be recycled by the system for next purpose.
+

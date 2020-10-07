@@ -1,0 +1,18 @@
+A string is a collection of alphanumeric data.
+Examples : Computer, New Delhi, Maths_2, etc.
+
+C doesnt have a dedicated datatype to represent string.
+A char array is used to represent it (string).
+
+It can store: 
+alphabets, digits, signs, symbols and special characters.
+
+It supports processing like:
+length calculation, reversal, copy, concatenation,
+comparison, case conversions, substring, etc.
+
+For various string operations custom code can
+be written and even ready code can be included
+from the header string.h
+
+Refer : The various programs and diagrams.

@@ -1,0 +1,48 @@
+Object
+=========
+Object is an instance of a class.
+It stores data and is required for
+processing (method invokations).
+
+
+Life of an Object
+=======================
+
+* In Java, objects are allocated, in the 
+heap segment of RAM, using the "new" 
+statement.
+
+
+* A composite block of memory is allocated
+for the object. It is a collection of
+non static data members of the class.
+
+
+* A non static initializer block gets 
+executed.
+
+* A constructor gets executed.
+
+Note: Both, the non static initializer
+block and the constructor, have a common
+role that is to initialize the data members
+of the object.
+
+* As the object gets created, its reference
+is returned and that must be caught and
+preserved.
+Object will be accessible (usable) only 
+through the reference.
+
+*If for an object, the reference(s) 
+are dropped (due to overwriting or
+due to life getting over) then the 
+object becomes unreferenced and hence
+unusable.
+
+*Java's, garbage collection mechanism
+auto detects the unreferenced object,
+calls a "finalize()" method (destructor)
+on them and clears them from memory.
+
+

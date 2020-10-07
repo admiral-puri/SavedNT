@@ -1,0 +1,9 @@
+* scanf is a predefined function.
+* It comes from header file stdio.h
+* It takes data from stdin and transfers into program variable(s).
+* It allows fetching data into multiple forms
+(decimal, hexadecimal, octal, char, string, ...).
+Hence it requires the use of format character.
+ 
+
+

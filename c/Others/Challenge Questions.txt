@@ -1,0 +1,23 @@
+1) Count the factors of a number.
+2) Check whether a given number is a palindrome number or not. Examples of palindrome numbers : 707, 88, 151, 299
+3) Find greater of n numbers.
+4) Find the count (occurrences) of a value in an array
+5) Find the second largest value in the array
+6) Implement pythagoras function that receives x and y as parameters. It calculates z and prints the triplet.  Hint include math.h to use sqrt(number).
+7) Implement a function to check whether a number is an ARMSTRONG number or not. It returns 1 or 0 as per number being Armstrong or not. ARMSTRONG : Addition of cubes of digits equals the number. Example : 153
+8) Implement a function that accepts a number as parameter (n), and returns then prime number next to n. Say n is 8 then it returns 11. Also when n is 17 it returns 19.
+9) Implement a function that accepts array as parameter, calculates and return the average.
+10) Implement a function to count and return the occurrences of a number in an array. Say {12, 15, 18, 12, 20} and for 12 it returns 2.
+11) Implementing functions write a C program that calculates the sum of all non prime numbers of an array.
+12) Initiailze an array with odd numbers. Print the non consecutive odd numbers. Say for an input 13, 21, 23, 25, 33, 35, 41, 45, 47 the output be 13,41
+13) Open a text file for reading. Output it in uppercase.
+14) Open a text file for reading. Count the number of characters, digits, spaces, commas and lines in the file. Output the statistics.
+15) Apply bubble sort on struct array (any memberwise). Display sorted array.
+16) Define a secondary type : Student with members {rno, name, percentage}. 
+Define and initialize (or scan) an array of 10 students. 
+Print the students with percentage greater than average percentage of the group.
+17) Declare a matrix 
+say int mat[3][4] = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}}
+Display output by spiral reading
+i.e. 1 2 3 4 8 12 11 10 9 5 6 7
+

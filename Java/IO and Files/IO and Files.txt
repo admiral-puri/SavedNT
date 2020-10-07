@@ -1,0 +1,80 @@
+I/O
+-------
+
+File or Device I/O  relies on streams.
+(A stream is a channel of data transfer between
+interconnected devices.)
+
+General procedure for i/o operations:
+1) Establish a stream
+2) Transfer data (read/write)
+3) Close the stream
+
+Establishing Streams
+--------------------------
+In case of files the stream is established
+through objects of classes like: 
+java.io.FileInputStream
+java.io.FileOutputStream
+java.io.FileReader
+java.io.FileWriter
+java.io.RandomAccessFile
+
+In case of devices socket connections are
+required for i/o.
+(Details to follow.)
+
+Following points must be considered while
+establishing the streams:
+1) Whether the stream is unidirectional or bidirectional.
+2) Whether the stream allows data transfer in text mode or binary mode.
+
+Accordingly objects of specific classes (with appropriate attributes) must be created.
+
+Data Transfer
+-----------------
+Once stream is established, it allows data transfer
+according to its charcteristics (i/o in binary or text mode).
+
+For data input Java provides following methods:
+1) read()
+* Fetches one byte/char of data from the stream   
+  (The internally maintained file pointer advances by 1 position).
+* Returns the ASCII value of the fetched byte/char.
+* In case the file pointer has reached EOF, then on read -1 is returned.
+* It is an input blocking method, so if the device/file has no data for fetch
+  then it blocks the program control.
+* It may raise IOException.
+
+2) read(byte[])
+* Fetches n bytes/chars of data from the stream   
+  (The internally maintained file pointer advances by n position).
+  Here n is the smaller of the two:
+    a) the array size
+    b) the number of byte available (for fetch) in the stream.
+* Returns n and the ASCII value of the fetched data is loaded in to the array.
+* In case the file pointer has reached EOF, then on read -1 is returned.
+* It is an input blocking method, so if the device/file has no data for fetch
+  then it blocks the program control.
+* It may raise IOException.
+
+3) int available()
+   * returns the number of bytes avaialble in the source stream for fetch. 
+
+4) skip(long n)  
+   * advances the internally maintained file read pointer by n positions.
+
+
+For data output Java provides following methods:
+1) write(int) 
+   * takes one byte of data as parameter and transmits it to the target stream.
+   * the data must be an ASCII value.
+2) write(byte, startPos, quantity) 
+   * takes a byte array of data for transmission to the target stream.
+   * quantity number of bytes from the startPos are fetched from the array and transmitted.
+   * the data in byte array must be ASCII values.
+   * raises IOException on transmission error.
+
+3) flush()
+   * Certain data writing methods use a buffer to gather the content for writing in one go. Such buffered data is force transmitted to the target device using flush.
+

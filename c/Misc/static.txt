@@ -1,0 +1,9 @@
+static variable
+--------------
+Local and Global variables may be declared as "static".
+A variable that is static gets the life equal to the life of the program.
+It gets allocated in data segment of RAM as program starts.
+It remains alive as long as the program is running.
+Hence it can preserve data across calls to the function.
+Being a variable, it may be overwritten / modified. 
+It is garbage free by default.

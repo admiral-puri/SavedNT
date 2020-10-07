@@ -1,0 +1,41 @@
+Datatypes
+-----------
+C classifies datatypes as :
+* Primary 
+* Secondary
+
+Primary datatypes are the types predefined with the system.
+They are ready for use.
+
+Secondary datatypes are custom types tailor made for an application.
+They are defined using struct or union.
+
+Usage of the datatypes
+-----------------------
+C allows following ways for usage of a (primary or secondary) datatype.
+
+* Through variable or object of the datatype. 
+Example ( int i; Book b; Ahead use i and b)
+
+* Through an array of the datatype. 
+Example ( int iarr[3] ; Book barr[3]; Ahead use the array)
+
+* Through a pointer of the datatype. 
+Example ( int *ip ; Book *bp; Ahead use the pointers)
+
+* As a functions return type.
+Example:
+   int fx1() {} 
+   Book fx2() {}
+
+(Refer : primarySecondaryTypes.png)
+
+============================================
+struct 
+
+A struct is a collection of hetrogenous data.
+It is used to compose (form) real life entities,
+example : Book, Time, Mouse, Camera, etc.
+
+The data of the struct is a composition
+of the attributes of the entity it represents.

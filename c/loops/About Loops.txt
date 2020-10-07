@@ -1,0 +1,68 @@
+Loops
+--------
+Loops are mechanisms used to repeat
+execution of a set of statements, as 
+long as a governing condition is true.
+
+Types
+----------
+C provides 3 types of loops:
+1) for loop
+2) while loop
+3) do while loop
+
+Loop design policy
+------------------
+1) Identify the statements to be repeated.
+2) Decide the loop cycle count. 
+In this way finalize : 
+* Initialziation (start value).
+* Reinitialization (change in value) 
+* Condition (stop value)
+3) Decide the type of loop.
+* for (when loop cycles may be 0-many)
+* while (when loop cycles may be 0-many)
+* do while (when loop cycles may be 1-many)
+
+
+Loop related terms
+-------------------
+Initialization : is assigning a start value to the loop controlling variable.
+Condition : is the value at which the loop must stop.
+Reinitialization : is the change in value of the loop controlling variable.
+
+
+Loop control statements
+-----------------------
+break : break statement is used to terminate the current loop.
+
+Syntax:
+for loop
+--------
+      1)                     2),5),8)        4),7)
+ for(INITIALIZATION; CONDITION; REINITIALIZATION)
+ {//on true
+  3),6) 
+  code to repeated
+ }
+ //on false
+ 9)
+
+while loop
+----------
+ INITIALIZATION
+ while(CONDITION)
+ {
+  code to repeated
+  REINITIALIZATION
+ }
+
+do while loop
+-------------
+
+INITIALIZATION
+do
+{
+  code to repeated
+  REINITIALIZATION
+}CONDITION

@@ -1,0 +1,69 @@
+This is question1
+q1o1
+q1o2
+q1o3
+DUMMY
+1
+
+This is question2
+q2o1
+q2o2
+q2o3
+q2o4
+4
+
+This is question3
+q3o1
+q3o2
+DUMMY
+DUMMY
+2
+
+This is question4
+q4o1
+q4o2
+q4o3
+DUMMY
+3
+
+This is question5
+q5o1
+q5o2
+q5o3
+q5o4
+1
+
+This is question6
+q6o1
+q6o2
+DUMMY
+DUMMY
+1
+
+This is question7
+q7o1
+q7o2
+DUMMY
+DUMMY
+2
+
+This is question8
+q8o1
+q8o2
+q8o3
+DUMMY
+2
+
+This is question9
+q9o1
+q9o2
+q9o3
+q9o4
+4
+
+This is question10
+q10o1
+q10o2
+q10o3
+q10o4
+3

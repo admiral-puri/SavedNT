@@ -1,0 +1,32 @@
+FAQ
+-------
+
+1) Why a variable is called a variable?
+A) A variable can change in value. i.e.
+it can vary, hence termed variable.
+
+2) Why a function is called a function?
+A) Functions perform actions for the program.
+They act. Hence they are called functions.
+
+3) What is the life of a C program?
+A) Life of a C program is defined by the main()
+function. 
+* System starts a C program with main().
+* All code of main() and invoked from main() executes.
+* As main() end program ends.
+
+4) Can ++ or -- be applied on constants? Explain.
+A) No. i.e. 10++ or --5 is illegal.
+The operators are designed to act on variables.
+Because internally x++ or ++x exands as x=x+1,
+so 10++ would expand as 10=10+1 and a constant
+on LHS of = is illegal. 
+
+5) What is conditional branching?
+A) Conditional branching is making system execute
+one portion of code and skip the other or vice-versa.
+C supports conditional branching using :
+if statement, switch statement and ternary oeprator.
+
+ 

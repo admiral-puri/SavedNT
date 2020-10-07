@@ -1,0 +1,75 @@
+Accessing Data (Variables/Arrays/Objects)
+-----------------------------------------
+Data of a program is accessible (r/w) in 2 ways:
+1) By an identifier (name).
+2) By memory location.
+
+Access by an identifier (name) is a common
+and widely used approach.
+Examples:
+   x = 10;
+   y = arr[3];
+   object.age = 10;
+Here x,y,arr[3] and obj.age are identifiers 
+used to read or write data into respective
+memory blocks.
+
+
+Access by memory location requires following:
+1) Declaration of a pointer.
+2) Referencing the pointer with the memory location of the variable/array/object.
+3) Dereferencing the pointer to perform reading/writing.
+
+Pointer
+---------
+A pointer is a variable that can:
+1) Store memory location.
+2) Be dereferenced to access the referred memory location.
+
+Referencing: 
+Referencing is assigning memory location of
+a target variable/array/object/... to a pointer. 
+
+Dereferencing:
+Dereferencing is the action on pointer to get
+the access of the referred variable/array/object/...
+
+Pointer Declaration
+--------------------
+Syntax: datatype * ptrName;
+Example: int *p;
+
+Referencing Variables/Objects/ArrayElements
+------------------------------------------
+For referencing the Variables/Objects/ArrayElements, apply the operator "&" on the respective names.
+Example : p = &x;
+
+Referencing Arrays/Matrices/Functions
+------------------------------
+For referencing Arrays/Matrices/Functions directly use their respective names.
+Example : p = arr;
+
+Dereferencing Variables/ArrayElements
+------------------------------------------
+For dereferencing the Variables/ArrayElements, apply a operator * on the pointer.
+Example : *p = 99 ;
+...
+
+Pointer Size and Datatype
+-------------------------
+See : ptrSizeDatatype.png
+
+Pointer to array
+----------------
+See : ptrArray.png
+
+Pointer to a Pointer
+--------------------
+A pointer can be used to refer to a variable
+for refering to a pointer, C allows declartion 
+of pointer to a pointer.
+
+It is used to refer to a pointer.
+And it supports :
+ 1) dereferencing
+ 2) double dereferencing

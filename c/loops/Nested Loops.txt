@@ -1,0 +1,27 @@
+Nested Loop
+-------------- 
+A nested loop is a loop inside a loop. 
+For one cycle of the outer loop the inner (nested) loop executes completely. 
+
+Types of nested loops
+-------------------------
+
+* A linear loop is a loop in which change in loop controlling factor is due to addition/subtration of units.
+* A logarithmic loop in which change in loop controlling factor is due to multiplication or division.
+
+Linear Logarithmic Loops: 
+A nested loop in which outer loop is linear and inner loop is logarithmic or vice versa.
+Hence number of iterations :
+   f(n) = n* log(n) to the base multiplier or divisor
+
+Quadratic : 
+A nested loop in which outer and inner loop runs same (fixed) number of times.
+Hence number of iterations :
+   f(n) = n*n
+
+Dependent Quadaratic : 
+A nested loop in which outer loop is linear and inner loop is dependent for one of its factors.
+Hence number of iterations :
+   f(n) = n* (n+1)/2
+
+

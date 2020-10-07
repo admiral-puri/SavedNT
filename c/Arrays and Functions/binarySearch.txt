@@ -1,0 +1,12 @@
+Binary Search 
+----------------
+1) Binary Search acts on a sorted set.
+2) It maps the lower and upper boundaries of the set.
+3) Calculate mid as (lBounary + uBoundary)/2
+4) Value and set[mid] point are  compared for :
+   a) Equality : When equal search stops and returns mid point a position of match
+   b) Less : When value to search is less than value at mid then upper boundary is set as mid -1 and search continues with step 3)
+   c) Greater : When value to search is greater than value at mid then lower boundary is set as mid + 1 and search continues with step 3)   
+
+In case lower boundary and upper boundary cross then search stops with not found result (-1).
+

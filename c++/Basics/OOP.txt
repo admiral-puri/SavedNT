@@ -1,0 +1,109 @@
+Object Oriented Programming
+================================
+
+Object Oriented Programming is a programming paradigm
+(a pattern) that typically uses:
+* Encapsulation
+* Polymorphism
+* Inheritance
+* Abstraction
+for application development.
+
+
+Encapsulation
+------------------
+Encapsulation is binding operations and attributes 
+of an entity into one unit.
+
+Consider an entity Clock
+Attributes : h,m,s
+Operations : setTime, displayTime, updateTime
+
+Form a unit:
+class Clock
+{
+ int h,m,s;
+
+ void setTime()
+ {...}
+
+ void updateTime()
+ {...}
+
+ void displayTime()
+ {...}
+
+}//Clock
+
+Polymorphism
+----------------
+Polymorphism is the ability of an object to perform 
+a task in multiple ways.
+The class defines multiple functions (methods) that 
+implement a particular task in a way each.
+
+class SuperBazaar
+{
+ //operation payment is polymorphic
+ payment(cash)
+ {...}
+
+ payment(card)
+ {...}
+
+ payment(loyaltyPoints)
+ {...}
+ 
+}
+
+
+Inheritance
+---------------
+Inheritance is the mechanism to extend the abilities 
+of an object.
+
+class Clock
+{
+ ... 
+ see above
+}
+
+class AlarmClock inherit Clock
+{//extension code 
+
+ int ah, am;
+ Rintone arr[]
+
+ setAlarmTime() 
+ {...}
+
+ matchAlarmTime()
+ {...}
+
+ playRingTone()
+ {...}
+
+ snooze()
+ {...}
+
+}
+
+
+Abstraction
+----------------
+Abstraction is exposing the operations of an object 
+while hiding their implementations.
+
+class Store
+{
+  sellCandy() //accessible to user
+  {
+    locateJar {} //internal (hidden) operation not accessible to user
+    openJar {} //internal (hidden) operation not accessible to user
+    accessMoneyBox() {} //internal (hidden) operation not accessible to user     
+    ...
+  }
+
+}//Store
+
+

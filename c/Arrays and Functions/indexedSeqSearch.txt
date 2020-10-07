@@ -1,0 +1,12 @@
+Indexed Sequential Search
+-----------------------------
+Indexed Sequential search finds a value across a sorted array or a sorted linked list (set).
+It begins comparison of the value with the first element of the set.
+It compares for equality and element being greater than value to be searched.
+Comparison progresses sequentially.
+If a match is found, comparison stops with FOUND status.
+If a match is not found, comparison stops 
+ *  at end of the set  
+ *  at a value greater than the value to be searched 
+with a NOTFOUND status (-1 or NULL).
+

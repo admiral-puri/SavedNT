@@ -1,0 +1,44 @@
+//see : quickSort.png
+
+void quickSort(int arr[], int x, int y)
+{
+ int key;
+ int i,j, temp;
+
+ if( x < y)
+ {
+  key = arr[x];
+  i = x; //lower boundary 
+  j = y; //upper boundary
+
+  while (i < j) //until i doesnt cross the j
+  {
+   while(key >= arr[i] && i < y )
+    i++;
+
+   while(key < arr[j] && j > x )
+    j--;
+
+   if(i <  j)//have i and j crossed : no
+   {//swap arr[i] and arr[j]
+     temp = arr[i];
+     arr[i] = arr[j];
+     arr[j] = temp;
+   }
+  }//while to repeat the procedure
+
+  //have i and j crossed : yes
+  //j is the final position of key in sorted array
+  //swap arr[x] and arr[j]
+  temp = arr[x];
+  arr[x] = arr[j];
+  arr[j] = temp;
+
+  //j is the pivot
+  //quick sort its left
+  quickSort(arr, x, j-1);
+  //quick sort its right
+  quickSort(arr, j+1,y);
+ }//if (x < y) //lower boundary must be less than upper boundary
+
+}//quickSort

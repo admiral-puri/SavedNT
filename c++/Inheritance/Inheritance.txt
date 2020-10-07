@@ -1,0 +1,244 @@
+Inheritance
+=================
+Inheritance is an OOP technique of forming
+new entites (derived classes) from existing 
+ones (base classes).
+
+The derived class gets:
+ * Code
+ * Data
+ * Compatibility
+from the base classes.
+
+The derived class hosts extended code and data.
+
+Syntax :
+---------
+class Base
+{
+ ...
+};
+class Derived : <access specifier> Base
+{
+ ...
+};
+
+Operator : is used to apply inheritance in C++.
+The possible list of access specifiers are :-
+  1) private (default)
+  2) protected 
+  3) public
+
+Inheritance of Code
+------------------------
+C++ allows inheritance of member functions.
+
+By this the object of derived class is allowed
+to invoke the member functions of the base 
+class.
+
+The derived class may :
+ * define new functions (extend code)
+ * redefine inherited functions (overridden code)
+
+
+Function Overriding
+--------------------
+Function overriding is redefining an 
+inherited function in the derived class,
+keeping the functions signature same.
+
+TypeCompatibility
+--------------------
+TypeCompatibility is established
+by inheritance.
+It allows a base class reference/pointer
+to refer to an object of the derived
+class. (Lose coupling).
+
+A base reference/pointer that refers
+to an object of derived class can be
+used to access only the inherited and
+overridden members. 
+
+The extended members are not accessible
+using a base class reference/pointer.
+
+Upcasting
+-----------
+When a base class pointer is assigned an
+address of the object of the derived class
+then upcasting occurs.
+
+Downcasting
+-------------
+When a base class pointer, that has an
+address of the object of the derived class,
+is assigned to a derived class pointer then
+downcasting occurs.
+
+
+
+Binding
+---------
+Binding is linking a function call with
+its definition.
+To bind, is the role of the compiler.
+For binding the compiler relies on:
+ * type of object
+ * function signatures
+
+If for a call a matching signature is
+found then binding is done otherwise
+an error is raised.
+
+As binding is done by compiler so
+it is also termed as "compile time
+binding" or "early binding".
+
+
+Normal function calls, constructor calls,
+calls to overloaded functions or constructors
+or operators, calls to static functions 
+are all compile time bound.
+
+
+Runtime/Late Binding
+-------------------------
+Consider a call to an overridden function 
+using a base class pointer/reference.
+
+C++ compiler takes into account the 
+datatype of pointer (base class) and 
+maps the call with the definition of 
+the function provied by the base class.
+
+Known that due to type compatibility
+the base class pointer may refer to 
+an object of derived class as well.
+
+And if such is the case then mapping
+of that call with the definition provided
+by the base class, is incorrect.
+
+For such a case the datatype of object 
+must be considered before binding.
+But the datatype of object may keep
+changing or may be known at run time
+only so compile time binding is not
+possible.
+
+To mention that overridden function
+called using a base class pointer should 
+not be compile time bound, it is declared 
+as "virtual".
+
+Note:
+A virtual function is a overridden
+function for which compile time binding
+is skipped if it is called using a 
+base class pointer.
+It is bound at runtime based on the
+type of object referred by the base 
+class pointer.
+
+
+For resolving a call to a virtual function, 
+system activates RTTI (runtime type identification)
+mechanism on the base class pointer.
+By this the datatype of object referred
+by the base class pointer gets identified.
+Accordingly binding is done i.e. 
+function definition provided by the
+class of the object is used for binding.
+
+
+This approach to bind an overridden function 
+call is known as late or runtime binding.
+
+
+pure virtual function
+---------------------
+A pure virtual function is a function:
+ 1) with signature only and no definition.
+ 2) that makes the class an abstract class.
+ 3) that is compulsory for the derived class to override.
+
+abstract class
+------------------
+An abstract class is a class that:
+ 1) cannot be instantiated.
+ 2) contains a pure virtual function.
+ 3) is inherited for use.
+
+
+
+Virtual Destructor
+------------------------
+virtual attribute applied to base
+class destructor enables :
+ * RTTI action
+ * accordingly mapping of destructors
+when delete is called on the base 
+class pointer that refers to a dynamically
+allocated object.
+
+Inheritance of Data
+----------------------
+System implements inheritance of 
+data as the object of derived class
+is created.
+
+Known that object creation is a 
+two step process:
+ * Memory Allocation
+ * Execution of the Constructor
+
+For an object of derived class, a
+composite block of memory is allocated.
+It has 2 portions: one having all
+non-static data members of the base
+class and the other composed of
+the non-static data members of the
+derived class.
+
+For initialization the constructors
+of the base and the derived classes,
+get invoked.
+
+Ideally the base class constructor
+initailizes the base class portion
+of the object. 
+And the derived class constructor 
+initializes the derived class portion
+of the object.
+
+The order of constructor execution
+is : base class constructor first
+and the derived class constructor next.
+
+
+Parameters to the constructor of base class when object of derived class is created
+--------------------------------------------------------------------------------------
+Know that for an object of derived 
+class, system invokes:
+* Default constructor of the base class
+* Parameter matching constructor of the derived class
+
+
+If it is required to execute a parameter
+matching constructor of the base class,
+then the derived class constructor must
+pass appropriate parameters to it.
+
+
+
+
+
+
+
+
+
+
+
+
